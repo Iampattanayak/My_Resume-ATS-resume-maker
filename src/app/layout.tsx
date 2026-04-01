@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/shared/theme-provider";
 import { Toaster } from "sonner";
 import { buildRootMetadata } from "@/lib/seo";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import MicrosoftClarity from "@/components/shared/microsoft-clarity";
 
@@ -35,6 +36,7 @@ export default function RootLayout({
           <Toaster richColors position="top-right" />
         </ThemeProvider>
         <MicrosoftClarity />
+        <Analytics />
       </body>
     </html>
   );
